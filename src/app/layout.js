@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import "./globals.css";
 
 export const metadata = {
@@ -12,8 +13,8 @@ export default function RootLayout({ children }) {
       <body>
         <nav className='mt-6 mb-6'>
           <ul className="flex gap-6">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
+            <li><Link prefetch={false} href="/">Home</Link></li>
+            <li><Link prefetch={false} href="/about">About</Link></li>
           </ul>
         </nav>
         <hr />

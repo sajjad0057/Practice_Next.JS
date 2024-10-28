@@ -1,6 +1,7 @@
 
 export default function Home() {
-  return (
+  console.log("Hello world");
+  return (   
     <main className="mt-10">
       <div className>
         Lorem ipsum dolor sit amet consectetur 
