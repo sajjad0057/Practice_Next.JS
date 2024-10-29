@@ -1,6 +1,8 @@
-import Link from 'next/link';
 
+import { Inter, Poppins} from 'next/font/google'
+import Link from 'next/link';
 import "./globals.css";
+const poppins = Inter({subsets : ["latin"], weight: '400'});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="p-6">
-      <body>
+      <body className={poppins.className}>
         <nav className='mt-6 mb-6'>
           <ul className="flex gap-6">
             <li><Link href="/">Home</Link></li>
