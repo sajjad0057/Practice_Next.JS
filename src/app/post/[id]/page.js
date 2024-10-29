@@ -1,6 +1,7 @@
 import PostComments from '@/app/components/PostComments';
 import getPost from '@/libs/getPost';
 import getPostComments from '@/libs/getPostComments';
+import getAllPosts from '@/libs/getAllPosts';
 import React, { Suspense } from 'react'
 
 export async function generateMetadata({params}) {
@@ -34,4 +35,12 @@ export default async function PostPage({params}) {
         
     </div>
   )
+}
+
+export async function generateStaticParams(){
+  const posts = await getAllPosts();
+
+  return posts.map((p)=>({
+    id : p.id.toString()
+  }));
 }
